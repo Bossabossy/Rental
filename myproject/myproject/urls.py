@@ -18,7 +18,8 @@ from django.contrib import admin
 from myapp import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home , name='home'),
+    #url(r'^$', views.home , name='home'),
     url(r'^customer/$', views.CreateCustomerView.as_view(), name='customer'),
     url(r'^rent/$', views.CreateRentView.as_view(), name='rent'),
+    url(r'^$', views.ListCarView.as_view(), name='car_list'),
     ]

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+{% if car_list %}
+    <table id="cars">
+    	<tr>
+            <th>Brand</th>
+            <th>Milage</th>
+            <th>Year</th>
+        </tr>
+        {% for car in car_list %}
+            <tr>
+                <td>{{ car.brand }}</td>
+                <td>{{ car.milage }}</td>
+                <td>{{ car.year }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <h3>No cars found!!! :(</h3>
+{% endif %}
+<a href="/customer/">signup</a>
+{% endblock %}
