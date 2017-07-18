@@ -19,5 +19,6 @@ class Rent(models.Model):
 	#on_delete=models.CASCADE
 	car=models.ForeignKey(Car, on_delete=models.CASCADE)
 	customer=models.ForeignKey(Customer, on_delete=models.SET_NULL, blank=True, null=True)
+	promotion_code=models.CharField(max_length=20,blank=True, null=True)
 	created=models.DateTimeField(auto_now_add=True)
 	updated=models.DateTimeField(auto_now=True)
