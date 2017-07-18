@@ -22,3 +22,4 @@ class Rent(models.Model):
 	promotion_code=models.CharField(max_length=20,blank=True, null=True)
 	created=models.DateTimeField(auto_now_add=True)
 	updated=models.DateTimeField(auto_now=True)
+	#hi
